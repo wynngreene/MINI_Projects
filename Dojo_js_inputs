@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        .display_hidden {
+            visibility: hidden;
+        }
+
+        /* DONT CHANGE */
+
+        body {
+            background-color: brown;
+            color: bisque;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 1em 10em;
+        }
+
+        #main_content {
+            margin: 0 25%;
+        }
+
+        .challenge_template {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em;
+        }
+
+        .button_wow {
+            margin-left: 2em;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button_wow button {
+            padding: 1em;
+            margin: .5em;
+        }
+
+        img {
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>PRACTICE CSS & JS Functions</h1>
+</header>
+
+<div id="main_content">
+    <div class="challenge_template">
+        <!--  CHAL 01 -->
+        <h4 id="ch_01_display_Text">CHALLENGE 01: Using JS Change my TEXT Color and Size.</h4>
+        <div class="button_wow" id="challenge_01">
+            <button id="btn_Change_Text_On" onclick="ch_01_Text_Change()">ON</button>
+            <button id="btn_Change_Text_Off" onclick="ch_01_Text_Back()">OFF</button>
+            <button id="btn_Change_Text_Reset" class="display_hidden">RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 02 -->
+        <h4>CHALLENGE 02: Add an image to my Div using JS.</h4>
+        <div id="img_01"></div>
+        <div class="button_wow" id="challenge_02">
+            <button id="btn_Add_image_On" onclick="ch_02_Add_Image()">ON</button>
+            <button id="btn_Add_image_Off" onclick="ch_02_Add_Off()">OFF</button>
+            <button class="display_hidden">RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 03 -->
+        <h4>CHALLENGE 03: Using JS show the hidden images and display them in a flex row spaced evenly.</h4>
+        <div class="button_wow" id="challenge_03">
+            <button id="btn_hidden_image_On" onclick="ch_03_hidden_Image()">ON</button>
+            <button>OFF</button>
+            <button class="display_hidden">RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 04 -->
+        <h4>CHALLENGE 04: Lets print a string to an alert button.</h4>
+        <div class="button_wow" id="challenge_04">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 05 -->
+        <h4>CHALLENGE 05: Increase the like number.</h4>
+        <div class="button_wow" id="challenge_05">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 06 -->
+        <h4>CHALLENGE 06: Lets print a string to span tag using a form.</h4>
+        <div class="button_wow" id="challenge_06">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 07 -->
+        <h4>CHALLENGE 07: Lets print a number to an span tag.</h4>
+        <div class="button_wow" id="challenge_07">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 08 -->
+        <h4>CHALLENGE 08: Print an array to an span.</h4>
+        <div class="button_wow" id="challenge_08">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 09 -->
+        <h4>CHALLENGE 09: Lets add 2+4 in a function.</h4>
+        <div class="button_wow" id="challenge_09">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+
+    <div class="challenge_template">
+        <!--  CHAL 10 -->
+        <h4>CHALLENGE 10: If statement/ for loop.</h4>
+        <div class="button_wow" id="challenge_10">
+            <button>ON</button>
+            <button>OFF</button>
+            <button>RESET</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    console.log("I'm connected!");
+
+    // Challenge 01 - Change the Text Color and Size
+    function ch_01_Text_Change() {
+        document.getElementById("ch_01_display_Text").style.color = "orange";
+        document.getElementById("ch_01_display_Text").style.fontSize = "larger";
+    }
+
+    function ch_01_Text_Back() {
+        document.getElementById("ch_01_display_Text").style.color = "bisque";
+        document.getElementById("ch_01_display_Text").style.fontSize = "medium";
+    }
+
+    // Challenge 02 - Add an Image to my Div using JS.
+    function ch_02_Add_Image() {
+        const imgDiv = document.getElementById('img_01');
+        const img = document.createElement('img');
+        img.src = 'https://via.placeholder.com/100'; // Example placeholder image
+        imgDiv.appendChild(img);
+    }
+
+    function ch_02_Add_Off() {
+        const imgDiv = document.getElementById('img_01');
+        if (imgDiv.hasChildNodes()) {
+            imgDiv.removeChild(imgDiv.firstChild);
+        }
+    }
+
+    // Challenge 03 - Use JS show the hidden images & display in a flex row spaced evenly.
+    function ch_03_hidden_Image() {
+        const images = document.querySelectorAll('.display_hidden');
+        images.forEach(image => {
+            image.style.visibility = 'visible';
+        });
+    }
+</script>
+</body>
+</html>
