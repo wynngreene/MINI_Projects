@@ -199,6 +199,15 @@
             image.style.visibility = 'visible';
         });
     }
+    
+    // Challenge 04 - Lets print a string to an alert button.
+    // Challenge 05 - Increase the like number.
+    // Challenge 06 - Lets print a string to span tag using a form.
+    // Challenge 07 - Lets print a number to an span tag.
+    // Challenge 08 - Print an array to an span.
+    // Challenge 09 - Lets add 2+4 in a function.
+    // Challenge 10 - If statement/ for loop.
+  
 </script>
 </body>
 </html>
