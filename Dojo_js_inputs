@@ -199,14 +199,61 @@
             image.style.visibility = 'visible';
         });
     }
-    
-    // Challenge 04 - Lets print a string to an alert button.
-    // Challenge 05 - Increase the like number.
-    // Challenge 06 - Lets print a string to span tag using a form.
-    // Challenge 07 - Lets print a number to an span tag.
-    // Challenge 08 - Print an array to an span.
-    // Challenge 09 - Lets add 2+4 in a function.
-    // Challenge 10 - If statement/ for loop.
+  
+/////////////////////
+  
+// Challenge 04 - Print a string to an alert button.
+function ch_04_Alert_String() {
+    alert("This is a string printed to an alert!");
+}
+
+// Challenge 05 - Increase the like number.
+let likeCount = 0;
+function ch_05_Increase_Like() {
+    likeCount++;
+    console.log("Likes: " + likeCount);
+}
+
+// Challenge 06 - Print a string to a span tag using a form.
+function ch_06_Print_String() {
+    const span = document.createElement('span');
+    span.textContent = "This is a string printed to a span!";
+    document.getElementById('challenge_06').appendChild(span);
+}
+
+// Challenge 07 - Print a number to a span tag.
+function ch_07_Print_Number() {
+    const span = document.createElement('span');
+    span.textContent = 42; // Example number
+    document.getElementById('challenge_07').appendChild(span);
+}
+
+// Challenge 08 - Print an array to a span.
+function ch_08_Print_Array() {
+    const span = document.createElement('span');
+    const array = [1, 2, 3, 4, 5];
+    span.textContent = array.join(', ');
+    document.getElementById('challenge_08').appendChild(span);
+}
+
+// Challenge 09 - Add 2 + 4 in a function.
+function ch_09_Add_Numbers() {
+    const result = 2 + 4;
+    console.log("2 + 4 = " + result);
+}
+
+// Challenge 10 - If statement/for loop.
+function ch_10_If_For_Loop() {
+    const array = [1, 2, 3, 4, 5];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            console.log(array[i] + " is even");
+        } else {
+            console.log(array[i] + " is odd");
+        }
+    }
+}
+
   
 </script>
 </body>
